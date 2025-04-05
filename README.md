@@ -1,3 +1,32 @@
+# Day-Night Cycle and Weather System
+
+This repository contains a comprehensive script that implements a dynamic day-night cycle along with a weather system featuring random storms, rain, and thunder sounds in Roblox. The script updates the Lighting properties to simulate time changes and periodically triggers weather events.
+
+## Overview
+
+- **Day-Night Cycle:**  
+  Gradually changes the in-game time and lighting based on a simulated 24-hour cycle.
+
+- **Weather System:**  
+  Randomly triggers storms during the day. During a storm, rain effects and thunder sounds are activated.
+
+## How It Works
+
+- **Lighting Update:**  
+  The script uses the `updateLighting` function to adjust brightness, ambient colors, and the in-game clock (`TimeOfDay`) according to the simulated time.
+
+- **Day-Night Simulation:**  
+  The `simulateDayNightCycle` function runs in a loop, updating the time and transitioning between day and night.
+
+- **Weather Manager:**  
+  The `weatherManager` function periodically checks if weather conditions are right to trigger a storm, and if so, it calls the `triggerStorm` function to create rain effects and play thunder sounds.
+
+- **Cleanup:**  
+  The script uses the `Debris` service to remove temporary objects (like thunder sounds) after they're no longer needed.
+
+## Script
+
+```lua
 -- DayNightCycleAndWeather.lua
 -- This script creates a dynamic day-night cycle and weather system.
 -- It updates Lighting properties to simulate time passing and
